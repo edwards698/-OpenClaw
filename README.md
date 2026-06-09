@@ -168,8 +168,15 @@ openclaw config set channels.whatsapp.dmPolicy open
 openclaw config set channels.whatsapp.allowFrom '["*"]'
 openclaw gateway restart
 ```
+For testing where only one specific number can message the bot, you'd flip both of those settings back to the restrictive versions:
+```bash
+openclaw config set channels.whatsapp.dmPolicy pairing
+openclaw config set channels.whatsapp.allowFrom '["+2609*******"]'
+openclaw gateway restart
+```
 
 ---
+
 
 ## STEP 8 — Test It!
 
